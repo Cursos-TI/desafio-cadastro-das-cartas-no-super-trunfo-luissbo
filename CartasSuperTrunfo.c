@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+/*Declaracao das variaveis*/
+
     char estado[3];
     char codigocarta[4];
     char nomecidade[20];
@@ -30,7 +32,7 @@
 
 
 
-    void entradadados(int x){
+    void entradadados(int x){ //Funcao para digitar e gravar os dados nas variaveis.
 
         printf("\n\n");
 
@@ -97,7 +99,7 @@
 
 
 
-void exibircarta(int x){
+void exibircarta(int x){ //Funcao para exibir os dados gravados nas variaveis.
 
 
         printf("\n");
@@ -132,22 +134,23 @@ void exibircarta(int x){
 
 }
 
-int main() {
+int main() { //Funcao principal
 
     entradadados(1);
-    denspopulacional = (float)populacao/area;
-    ppc = pib/(float)populacao;
-    superpoder = (float)populacao + area + pib + ppc + (float)pturisticos + (1/denspopulacional);
+    denspopulacional = (float)populacao/area; //Calcula Densidade Populacional 1
+    ppc = pib/(float)populacao; //Calcula PIB per Capita 1
+    superpoder = (float)populacao + area + pib + ppc + (float)pturisticos + (1/denspopulacional); //Calcula superpoder 1
     exibircarta(1);
 
     entradadados(2);
-    denspopulacional2 = (float)populacao2/area2;
-    ppc2 = pib2/(float)populacao2;
-    superpoder2 = (float)populacao2 + area2 + pib2 + ppc2 + (float)pturisticos2 + (1/denspopulacional2);
+    denspopulacional2 = (float)populacao2/area2; //Calcula Densidade Populacional 2
+    ppc2 = pib2/(float)populacao2; //Calcula PIB per capita 2
+    superpoder2 = (float)populacao2 + area2 + pib2 + ppc2 + (float)pturisticos2 + (1/denspopulacional2); //Calcula superpoder 2
     exibircarta(2);
 
     printf("\n\nResultado: \n\n");
 
+/*Verifica quais cartas ganharam nas propriedades*/
 
     printf("População: ");
     if(populacao > populacao2){
@@ -218,6 +221,8 @@ int main() {
         printf("0.\n");
         carta2++;
     }
+
+    /*Verifica qual carta ganhou*/
 
     if(carta > carta2){
         printf("Carta 1 Venceu!");
